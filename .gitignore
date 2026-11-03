@@ -1,0 +1,9 @@
+/target/
+/dist/
+.idea/
+.DS_Store
+*.log
+.env
+.env.*
+*.p12
+*.p8

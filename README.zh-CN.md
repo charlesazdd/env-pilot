@@ -4,7 +4,7 @@
 
 系统要求：macOS 12 或更高版本，Apple Silicon 或 Intel。开发需要 Rust Stable 和 Xcode Command Line Tools。在 RustRover 中直接打开目录，运行或调试 `envpilot` Cargo 目标，无需 JavaScript 工具链。
 
-本地运行 `cargo run`，发布构建使用 `cargo build --release`。macOS 打包依次运行 `./scripts/build-macos.sh`、`./scripts/package-macos.sh`、`./scripts/generate-dmg.sh`，可传入 `aarch64` 或 `x86_64` 指定架构。图标为系统临时占位图标；`packaging/macos/Info.plist` 中的 Bundle Identifier 为占位值。
+本地运行 `cargo run`；在 macOS 上也可运行 `./scripts/run-macos.sh`，以应用包启动并显示 Dock 图标。发布构建使用 `cargo build --release`。macOS 打包依次运行 `./scripts/build-macos.sh`、`./scripts/package-macos.sh`、`./scripts/generate-dmg.sh`，可传入 `aarch64` 或 `x86_64` 指定架构。`packaging/macos/Info.plist` 中的 Bundle Identifier 为占位值。
 
 从 GitHub Releases 下载对应 DMG，打开后将 EnvPilot 拖入 Applications。初期构建未签名、未公证，可能被 Gatekeeper 阻止；请参考 Apple 关于打开未识别开发者软件的说明。可通过 `CODESIGN_IDENTITY` 启用签名；公证需要 Apple 开发者凭据，并使用 `xcrun notarytool` 单独提交及装订。请勿提交凭据。
 

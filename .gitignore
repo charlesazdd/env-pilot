@@ -1,9 +1,26 @@
+# Rust 和 macOS 打包产物；应用程序需要跟踪 Cargo.lock。
 /target/
 /dist/
+*.dmg
+*.app/
+
+# RustRover / JetBrains 本地设置。
 .idea/
+*.iml
+
+# macOS 文件管理器和临时文件。
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# 本地日志、环境配置及签名凭据。
 *.log
 .env
 .env.*
+!.env.example
 *.p12
 *.p8
+*.mobileprovision
